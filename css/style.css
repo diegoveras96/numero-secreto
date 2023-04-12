@@ -8,6 +8,7 @@
 :root{
     --font-family: 'Kanit', sans-serif;
     --p-color: #F2E3DB;
+    --s-color: #E86A33;
     --bg-color: #263A29;
 }
 
@@ -36,13 +37,40 @@ h3{
 .mensagem{
     font-size: 1.5em;
     margin-top: 40px;
-
 }
 .box{
-    border: 4px inset var(--p-color);
+    border: 5px groove var(--p-color);
     display: inline-block;
     font-size: 4em;
     
     padding: 20px;
     margin: 20px;
+}
+
+.numero{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+#btn-comeco{
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--s-color);
+    font-family: var(--font-family);
+    font-size: 2em;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#btn-comeco:hover{
+    background-color: #d6480b;
+}
+#btn-comeco:active{
+    border: 3px inset black;
 }

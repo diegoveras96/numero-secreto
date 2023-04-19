@@ -6,8 +6,6 @@ var minValor = 1;
 var maxValor = 100;
 
 const elementoNumero = document.querySelectorAll('.numero');
-elementoNumero[0].innerHTML = minValor;
-elementoNumero[1].innerHTML = maxValor;
 
 elementoNumero.forEach((elemento)=>{
     elemento.addEventListener("mousedown", (valor)=>{

@@ -2,8 +2,8 @@ window.addEventListener("contextmenu", (event)=>{
     event.preventDefault();
 })
 const btn = document.querySelector('#btn-comeco')
-var minValor = 1;
-var maxValor = 100;
+var minValor = document.querySelector('#menor-valor').innerHTML;
+var maxValor = document.querySelector('#maior-valor').innerHTML;
 
 const elementoNumero = document.querySelectorAll('.numero');
 

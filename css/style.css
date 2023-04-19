@@ -41,8 +41,7 @@ h3{
 .box{
     border: 5px groove var(--p-color);
     display: inline-block;
-    font-size: 4em;
-    
+    font-size: 4em;    
     padding: 20px;
     margin: 20px;
 }
@@ -57,20 +56,26 @@ h3{
     cursor: pointer;
 }
 
-#btn-comeco{
+.btn{
     margin-top: 30px;
     padding: 15px;
     background-color: var(--s-color);
     font-family: var(--font-family);
     font-size: 2em;
-    color: white;
+    color: var(--p-color);
     border-radius: 5px;
     border: 2px solid black;
     cursor: pointer;
 }
-#btn-comeco:hover{
+.btn:hover{
     background-color: #d6480b;
 }
-#btn-comeco:active{
+.btn:active{
     border: 3px inset black;
+}
+
+img{
+    width: 25px;
+    
+    color: var(--p-color);
 }

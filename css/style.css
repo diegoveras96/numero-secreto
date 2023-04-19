@@ -63,7 +63,7 @@ h3{
     font-family: var(--font-family);
     font-size: 2em;
     color: var(--p-color);
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid black;
     cursor: pointer;
 }

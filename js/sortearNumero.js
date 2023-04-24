@@ -68,7 +68,6 @@ function criarRestart(){
     document.body.appendChild(container);
 
     //Botão de reset voltando pros padrões da página
-    //SUGESTÂO -> Colocar o button dentro de uma tag <a> com o href nulo
     resetBtn.addEventListener("click", (resetarPagina));
 }
 

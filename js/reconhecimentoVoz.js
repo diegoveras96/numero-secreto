@@ -1,14 +1,14 @@
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-const elementoChute = document.querySelector('#chute');
 
-var recognition = new SpeechRecognition();
+const elementoChute = document.querySelector('#chute');
+const recognition = new SpeechRecognition();
 recognition.lang = 'pt-Br';
-recognition.start();
+recognition.start()
 
 recognition.addEventListener('result', onSpeak);
 
 function onSpeak(e){
-    console.log('Foi!')
+    console.log(e)
     // let chute = e.results[0][0].transcript;
     // exibeChute(chute);
 }

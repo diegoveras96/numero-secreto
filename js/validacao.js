@@ -5,7 +5,7 @@ function verificarChute(chute){
 
     if (Number.isNaN(numero)){
         if (chute === "game over"){
-            recognition.abort();
+            recognition.stop();
             document.body.style.backgroundColor = "#850000";
             document.body.style.color = "#FFDB89";
             document.body.innerHTML = `

@@ -21,7 +21,7 @@ btn.addEventListener("click", ()=>{
         maxValor = aux;
     }  
     
-    escolha.innerText = `O Número Escolhido Está Entre ${minValor} e ${maxValor}`; //.innerText foi escolhido no lugar do .replace() para não ter edição de valores depois de escolhido, com a tela sempre mostrando a faixa correta dos números
+    escolha.innerText = `Escolha Um Número Entre ${minValor} e ${maxValor}`; //.innerText foi escolhido no lugar do .replace() para não ter edição de valores depois de escolhido, com a tela sempre mostrando a faixa correta dos números
     const numeroSecreto = Math.floor(Math.random() * (maxValor - minValor + 1) + minValor); //Função que pega o inteiro entre os números escolhidos
     btn.remove();
     criarRestart();
@@ -70,8 +70,10 @@ function criarRestart(){
 
     //Botão de reset voltando pros padrões da página
     //SUGESTÂO -> Colocar o button dentro de uma tag <a> com o href nulo
-    resetBtn.addEventListener("click", ()=>{
-        window.location.href = "";
-    });
+    resetBtn.addEventListener("click", (resetarPagina));
+}
 
+//Função de Reset da Página
+function resetarPagina(){
+    window.location.href = "";
 }

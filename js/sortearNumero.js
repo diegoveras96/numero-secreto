@@ -5,6 +5,7 @@ const btn = document.querySelector('.btn');
 const escolha = document.querySelector('#escolha');
 var minValor = document.querySelector('#menor-valor').innerHTML;
 var maxValor = document.querySelector('#maior-valor').innerHTML;
+var numeroSecreto;
 
 const elementoNumero = document.querySelectorAll('.numero');
 
@@ -22,15 +23,13 @@ btn.addEventListener("click", ()=>{
     }  
     
     escolha.innerText = `Escolha Um Número Entre ${minValor} e ${maxValor}`; //.innerText foi escolhido no lugar do .replace() para não ter edição de valores depois de escolhido, com a tela sempre mostrando a faixa correta dos números
-    const numeroSecreto = Math.floor(Math.random() * (maxValor - minValor + 1) + minValor); //Função que pega o inteiro entre os números escolhidos
+    numeroSecreto = Math.floor(Math.random() * (maxValor - minValor + 1) + minValor); //Função que pega o inteiro entre os números escolhidos
     btn.remove();
     criarRestart();
-
-    console.log(numeroSecreto)
+    ouvirUsuario();
+    console.log(numeroSecreto);
 })
-
-function operacao(id, valor, mouse){
-
+function operacao(id, valor, mouse){    
     //Pega o botão do Mouse que aconteceu o Click e altera a variável auxiliar $valor, usada porque ainda não sabemos qual estamos mexendo
     if (mouse === 0){
         valor++;
@@ -63,7 +62,7 @@ function criarRestart(){
     const container = document.createElement('div');
     const resetBtn = document.createElement('button');
     resetBtn.classList.add('btn');
-    resetBtn.innerHTML = `Recomeçar o Game`;
+    resetBtn.innerHTML = `Recomeçar o Game <i class="fa-solid fa-arrow-rotate-right fa-spin" style="color: #f2e3db;"></i>`;
 
     container.append(resetBtn);
     document.body.appendChild(container);

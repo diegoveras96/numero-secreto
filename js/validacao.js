@@ -1,10 +1,25 @@
 function verificarChute(chute){
-    const numero = +chute
-    console.log(numeroSecreto)
-    console.log(chute)
+    const numero = +chute;
+    console.log(numeroSecreto);
+    console.log(chute);
 
     if (Number.isNaN(numero)){
-        elementoChute.innerHTML += `<div>Valor Inválido</div>`;
+        if (chute === "game over"){
+            recognition.abort();
+            document.body.style.backgroundColor = "#850000";
+            document.body.style.color = "#FFDB89";
+            document.body.innerHTML = `
+                <h1>QUE PENA, VOCÊ NÃO CHEGOU NO NÚMERO SECRETO <i class="fa-regular fa-face-sad-cry" style="color: #ffdb89;"></i></h1>
+                <h3>Mas você pode tentar novamente clicando no botão abaixo</h3>
+                `
+            criarRestart();
+            const btn = document.querySelector('.btn');
+            btn.style.backgroundColor = "#DC0000";
+            btn.style.color = "#FFF6C3";
+            btn.innerText = "Jogar Novamente";
+        } else{
+            elementoChute.innerHTML += `<div>Valor Inválido</div>`;
+        }
     } else if(numero > maxValor || numero < minValor){
         elementoChute.innerHTML += `Valor Inválido: O número secreto precisa estar entre ${minValor} e ${maxValor}`;
     } else{
